@@ -22,10 +22,6 @@ class ProfilesController < ApplicationController
     end
   end
 
-  # def show
-  #   @profile = Profile.find(params[:id])
-  # end
-
   def edit
     @profile = Profile.find(params[:id])
   end
@@ -33,8 +29,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     if @profile.update(profile_params)
-
-      render :show
+      redirect_to edit_profile_path(current_user.id)
     end
   end
 

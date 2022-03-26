@@ -15,7 +15,7 @@
         <%= image_tag :profiles.profile_image, class: "icon" %>
       <% else %>
         <%= image_tag "default_icon.jpg", class: "icon" %>
-      <% end %> 
+      <% end %>
     </div>
     <div class="input-label">
       <%= f.label :profile_name,"ユーザー名" %>
@@ -30,13 +30,13 @@
       <%= f.text_field :self_introduction %>
     </div>
     <div class="input-label">
-    <%= f.label :self_introduction,"ユーザーアイコン" %>
+      <%= f.label :self_introduction,"ユーザーアイコン" %>
     </div>
     <div class="input-form">
-    <%= f.file_field :profile_image %>
+      <%= f.file_field :profile_image %>
     </div>
-
-
+    <div class="input-label">
       <%= f.submit "保存する場合はクリック" %>
+    </div>
       <% end %>
   </article>
